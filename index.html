@@ -73,8 +73,9 @@
         </div>
       </section>
       <!-- card Section -->
-      <section class="bg-green-50 p-8">
-        <div class="card-container grid gap-6 lg:grid-cols-[1fr_1fr_1fr_0.8fr]">
+      <section class="bg-green-50 p-8 grid gap-6 grid-cols-[1fr_0.99fr]">
+        <div class="card-container grid gap-6 grid-cols-[1fr_1fr_1fr]">
+          <!-- lg:grid-cols-[1fr_1fr_1fr_0.8fr] -->
           <!-- card-1 -->
           <div
             class="hind-madurai-regular shadow-md p-6 h-fit rounded-lg bg-white w-409"
@@ -204,38 +205,36 @@
           <!-- card 7 -->
           <!-- card 8 -->
           <!-- card 9 -->
-          <!-- right section -->
-          <aside class="bg-white px-5 py-3 shadow-md rounded-lg">
-            <div
-              class="flex justify-between justify-center items-center bg-white"
+        </div>
+        <!-- right section -->
+        <aside class="bg-white px-5 py-3 shadow-md rounded-lg">
+          <div
+            class="flex justify-between justify-center items-center bg-white"
+          >
+            <p class="text-[1rem] roboto-normal whitespace-nowrap">
+              <i class="fa-regular fa-clock font-medium"></i> Call History
+            </p>
+            <button
+              class="bg-green-600 border rounded-full py-3 px-6 text[1rem]"
             >
-              <p class="text-[1rem] roboto-normal whitespace-nowrap">
-                <i class="fa-regular fa-clock font-medium"></i> Call History
-              </p>
-              <button
-                class="bg-green-600 border rounded-full py-3 px-6 text[1rem]"
-              >
-                Clear
-              </button>
-            </div>
-            <!-- history div -->
-            <div class="history container bg-[#FAFAFA] p-2 rounded mt-2">
-              <div class="flex justify-between items-center">
-                <div>
-                  <p class="font-semibold text-[1rem]">
-                    National Emergency Number
-                  </p>
-                  <p class="text-[.7rem] text-[#5C5C5C]">999</p>
-                </div>
-                <div
-                  class="text-[.8rem] hind-madurai-regular whitespace-nowrap"
-                >
-                  11:36:58 AM
-                </div>
+              Clear
+            </button>
+          </div>
+          <!-- history div -->
+          <div class="history container bg-[#FAFAFA] p-2 rounded mt-2">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="font-semibold text-[1rem]">
+                  National Emergency Number
+                </p>
+                <p class="text-[.7rem] text-[#5C5C5C]">999</p>
+              </div>
+              <div class="text-[.8rem] hind-madurai-regular whitespace-nowrap">
+                11:36:58 AM
               </div>
             </div>
-          </aside>
-        </div>
+          </div>
+        </aside>
       </section>
     </header>
   </body>
