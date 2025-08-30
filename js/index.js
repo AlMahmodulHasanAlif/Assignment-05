@@ -1,4 +1,3 @@
-const heartIcon = document.querySelectorAll(".heart-icon");
 //heart increase
 document
   .getElementById("card-container")
@@ -58,5 +57,33 @@ document
             </div>
     `;
       historyContainer.append(callHistory);
+    }
+  });
+
+//Clear Button
+
+const btnClear = document.getElementById("btn-clear");
+btnClear.addEventListener("click", function () {
+  const historyContainer = document.getElementById("history-container");
+  historyContainer.innerHTML = "";
+});
+
+//Copy Button
+document
+  .getElementById("card-container")
+  .addEventListener("click", function (e) {
+    if (e.target.className.includes("copy-btn")) {
+      const serviceNumber =
+        e.target.parentNode.parentNode.parentNode.children[1].children[3]
+          .innerText;
+      console.log(serviceNumber);
+      navigator.clipboard
+        .writeText(serviceNumber)
+        .then(() => {
+          alert("Copied number is " + serviceNumber);
+        })
+        .catch((err) => {
+          console.error("Failed to copy!", err);
+        });
     }
   });
