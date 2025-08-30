@@ -76,7 +76,6 @@ document
       const serviceNumber =
         e.target.parentNode.parentNode.parentNode.children[1].children[3]
           .innerText;
-      console.log(serviceNumber);
       navigator.clipboard
         .writeText(serviceNumber)
         .then(() => {
@@ -85,5 +84,9 @@ document
         .catch((err) => {
           console.error("Failed to copy!", err);
         });
+      const copyCount = document.getElementById("copy-count").innerText;
+      let copyCountIncrease = Number(copyCount);
+      copyCountIncrease++;
+      document.getElementById("copy-count").innerText = copyCountIncrease;
     }
   });
