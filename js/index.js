@@ -79,7 +79,7 @@ document
       navigator.clipboard
         .writeText(serviceNumber)
         .then(() => {
-          alert("Copied number is " + serviceNumber);
+          alert("Copied number is: " + serviceNumber);
         })
         .catch((err) => {
           console.error("Failed to copy!", err);
