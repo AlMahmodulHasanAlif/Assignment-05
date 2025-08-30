@@ -26,26 +26,25 @@ document
       }
       totalStarPoints = starPoints - 20;
       document.getElementById("star-points").innerText = totalStarPoints;
-    }
-    //alert calling
-    const serviceName =
-      e.target.parentNode.parentNode.children[1].children[1].innerText;
-    const serviceNumber =
-      e.target.parentNode.parentNode.children[1].children[3].innerText;
-    alert("Calling" + " " + serviceName + " " + serviceNumber + "...");
-    //call history
-    let now = new Date();
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
-    let ampm = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12;
-    hours = hours ? hours : 12;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    const historyContainer = document.getElementById("history-container");
-    const callHistory = document.createElement("div");
-    callHistory.innerHTML = `
+      //alert calling
+      const serviceName =
+        e.target.parentNode.parentNode.children[1].children[1].innerText;
+      const serviceNumber =
+        e.target.parentNode.parentNode.children[1].children[3].innerText;
+      alert("Calling" + " " + serviceName + " " + serviceNumber + "...");
+      //call history
+      let now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+      let ampm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      const historyContainer = document.getElementById("history-container");
+      const callHistory = document.createElement("div");
+      callHistory.innerHTML = `
             <div class="flex justify-between items-center bg-[#FAFAFA] p-2 rounded mt-2">
               <div>
                 <p class="font-semibold text-[.8rem]">
@@ -58,5 +57,6 @@ document
               </div>
             </div>
     `;
-    historyContainer.append(callHistory);
+      historyContainer.append(callHistory);
+    }
   });
